@@ -6,6 +6,7 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <AssemblyName>Calculator.WebApi.Services</AssemblyName>
         <RootNamespace>Calculator.WebApi.Services</RootNamespace>
+        <OutputType>Library</OutputType>
     </PropertyGroup>
 
 </Project>

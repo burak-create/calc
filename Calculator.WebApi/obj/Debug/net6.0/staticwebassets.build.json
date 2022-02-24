@@ -1,11 +1,23 @@
 {
   "Version": 1,
-  "Hash": "TpTEK7gQcXaFnrWCpmaD02uiIJ5dhBBkYjvx5iQu1tM=",
+  "Hash": "Ro/SND0d4UxobXdoxzAkKNFGH4M4Ua1A+VZX+iWLgHM=",
   "Source": "Calculator.WebApi",
   "BasePath": "_content/Calculator.WebApi",
   "Mode": "Default",
   "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "/Users/devops/RiderProjects/CalculatorWebApi/Calculator.WebApi.Services/Calculator.WebApi.Services.csproj",
+      "Version": 2,
+      "Source": "Calculator.WebApi.Services",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier"
+    }
+  ],
   "DiscoveryPatterns": [],
   "Assets": []
 }

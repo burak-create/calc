@@ -1,6 +1,4 @@
-using Calculator.WebApi;
-
-namespace CalculatorService.WebApi
+namespace Calculator.WebApi
 {
     public class Program
     {
@@ -9,11 +7,8 @@ namespace CalculatorService.WebApi
             CreateHostBuilder(args).Build().Run();
         }
 
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
+        private static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
-                    webBuilder.UseStartup<Startup>();
-                });
+                .ConfigureWebHostDefaults(webBuilder => { webBuilder.UseStartup<Startup>(); });
     }
 }

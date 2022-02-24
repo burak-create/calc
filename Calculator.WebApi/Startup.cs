@@ -10,16 +10,25 @@ namespace Calculator.WebApi
             Configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; }
+        private IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddTransient<ICalculator, Services.CalculatorService>();
+            services.AddTransient<ICalculator, SimpleCalcService>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Calculator.WebApi", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Title = "CalculatorWebApi",
+                    Description = null,
+                    Version = "v1.0.0",
+                    TermsOfService = null,
+                    Contact = null,
+                    License = null,
+                    Extensions = null
+                });
             });
         }
 
@@ -30,8 +39,10 @@ namespace Calculator.WebApi
             {
                 app.UseDeveloperExceptionPage();
             }
+            
             app.UseSwagger();
             app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Calculator.WebApi v1"));
+
             app.UseHttpsRedirection();
 
             app.UseRouting();
